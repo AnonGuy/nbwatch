@@ -2,7 +2,7 @@
 Preview IPython notebooks in your browser.
 
 # Installation
-nbwatch can be installed from [PyPi](https://pypi.org/project/nbwatch/):
+nbwatch can be installed from [PyPI](https://pypi.org/project/nbwatch/):
 ```shell
 pip install tapmap
 ```
