@@ -4,7 +4,7 @@ Preview IPython notebooks in your browser.
 # Installation
 nbwatch can be installed from [PyPI](https://pypi.org/project/nbwatch/):
 ```shell
-pip install tapmap
+pip install nbwatch
 ```
 Or with [poetry](https://poetry.eustace.io):
 ```shell
