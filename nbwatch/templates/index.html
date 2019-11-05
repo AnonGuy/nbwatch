@@ -25,13 +25,13 @@
     <script>
         var source = new EventSource('/');
         source.onmessage = function (event) {
-            var content = atob(event.data);
-            document.body.innerHTML = content;
+            console.log('Reloading page...');
+            location.reload();
         };
     </script>
-    <style>{{ inlining }}</style>
+    <style>{{ inlining | safe }}</style>
 </head>
 
-<body>{{ body }}</body>
+<body>{{ body | safe }}</body>
 
 </html>
