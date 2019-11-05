@@ -5,9 +5,10 @@ Usage:
 
 Options:
   -h --help  Show this screen.
+  --version  Display the version number.
 """
 
-__version__ = '0.2.0'
+__version__ = '0.2.1'
 
 import time
 import base64
@@ -53,9 +54,9 @@ def read_final(path: Path) -> str:
 def watch(path: Path) -> Iterator[str]:
     """
     Watch the provided notebook for changes.
-    Yield the new HTML body each time a change is detected.
+    Update the body each time a change is detected, then trigger a page reload.
     """
-    last_modified = path.stat().st_mtime
+    last_modified = 0
     while path.exists():
         time.sleep(.5)
         if path.stat().st_mtime > last_modified:
